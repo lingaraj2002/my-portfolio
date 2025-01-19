@@ -11,13 +11,15 @@
   :root {
     --background: #0a0a0a;
     --foreground: #ededed;
+    --font-titillium: "Titillium Web", sans-serif;
+    --font-poppins: "Poppins", sans-serif;
   }
 }
 
 body {
   color: var(--foreground);
   background: var(--background);
-  font-family: "Poppins", sans-serif;
+  font-family: var(--font-poppins);
 }
 h1,
 h2,
@@ -25,5 +27,5 @@ h3,
 h4,
 h5,
 h6 {
-  font-family: "Titillium Web", sans-serif;
+  font-family: var(--font-titillium);
 }
