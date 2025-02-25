@@ -17,14 +17,15 @@ const vt323 = VT323({
   variable: "--font-vt323",
 });
 
+const colors = {
+  lightColor: "#f8f8ff",
+  darkColor: "#171717",
+};
+
 const Layout: React.FC<{ children: React.ReactNode }> = ({ children }) => {
   const [page, setPage] = useState("home");
   const [isMobile, setIsMobile] = useState(false);
   const [isScrolled, setIsScrolled] = useState(false);
-  const [colors, setColors] = useState({
-    lightColor: "#f8f8ff",
-    darkColor: "#171717",
-  });
 
   useEffect(() => {
     if (typeof window === "undefined") return; // Ensure code runs only on client

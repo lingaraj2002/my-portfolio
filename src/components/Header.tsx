@@ -10,7 +10,18 @@ import BurgerWhite from "../assets/icon/burger-white.svg";
 import BurgerBlack from "../assets/icon/burger-black.svg";
 import Image from "next/image";
 
-export default function Header(props) {
+interface HeaderProps {
+  isMobile: boolean;
+  isScrolled: boolean;
+  colors: {
+    lightColor: string;
+    darkColor: string;
+  };
+  page: string;
+  setPage: (page: string) => void;
+}
+
+export default function Header(props: HeaderProps) {
   const { isMobile, isScrolled, colors, page, setPage } = props;
   const [openNavItem, setOpenNavItem] = useState(false);
   console.log(page, "page");
