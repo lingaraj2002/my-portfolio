@@ -1,5 +1,7 @@
 "use client";
 import React, { useState } from "react";
+import { useRouter } from "next/router";
+import { usePathname } from "next/navigation";
 import Link from "next/link";
 import styles from "../styles/Header.module.scss";
 import MainLogoWhite from "../assets/logo/my-portfolio-logo-white.png";
@@ -24,6 +26,8 @@ interface HeaderProps {
 export default function Header(props: HeaderProps) {
   const { isMobile, isScrolled, colors, page, setPage } = props;
   const [openNavItem, setOpenNavItem] = useState(false);
+  // const router = useRouter();
+  const pathname = usePathname();
   console.log(page, "page");
   return (
     <header
@@ -35,7 +39,8 @@ export default function Header(props: HeaderProps) {
     >
       <nav className="max-w-7xl px-4 py-4 sm:py-2 mx-auto flex justify-between items-center relative">
         <Image
-          src={isScrolled ? MainLogoWhite.src : MainLogoBlack.src}
+          // src={isScrolled ? MainLogoWhite.src : MainLogoBlack.src}
+          src={MainLogoWhite.src}
           width={128}
           height={32}
           alt="MainLogo"
@@ -46,24 +51,27 @@ export default function Header(props: HeaderProps) {
             openNavItem ? "bottom-full left-0" : "left-full bottom-full"
           }`}
           style={
+            // {
+            //   "--nav-item-color": isScrolled
+            //     ? colors.lightColor
+            //     : colors.darkColor,
+            // } as React.CSSProperties
             {
-              "--nav-item-color": isScrolled
-                ? colors.lightColor
-                : colors.darkColor,
-            } as React.CSSProperties
+              "--nav-item-color": colors.lightColor,
+            }
           }
         >
           <li
             className={`${styles.navItem} ${
-              page === "home" ? styles.navActive : ""
+              pathname === "/" ? styles.navActive : ""
             }`}
             onClick={() => setPage("home")}
           >
             <Link href="/">Home</Link>
           </li>
           <li
-            className={`${styles.navItem} ${
-              page === "about" ? styles.navActive : ""
+            className={` ${
+              pathname === "/about" ? styles.navItem__active : styles.navItem
             }`}
             onClick={() => setPage("about")}
           >
@@ -104,16 +112,18 @@ export default function Header(props: HeaderProps) {
           {!isMobile && (
             <li>
               <a
-                className={`flex items-center cursor-pointer px-4 py-0 xs:border-0 sm:border-2 rounded-2xl hover:scale-105  ${
-                  isScrolled ? "border-white" : "border-stone-950"
-                }`}
+                className={`flex items-center cursor-pointer px-4 py-0 xs:border-0 sm:border-2 rounded-2xl hover:scale-105 border-white  
+                  
+                `}
+                // ${isScrolled ? "border-white" : "border-stone-950" }
               >
                 <Image
-                  src={
-                    !isMobile && isScrolled
-                      ? DownloadResumeWhite.src
-                      : DownloadResumeBlack.src
-                  }
+                  // src={
+                  //   !isMobile && isScrolled
+                  //     ? DownloadResumeWhite.src
+                  //     : DownloadResumeBlack.src
+                  // }
+                  src={DownloadResumeWhite.src}
                   width={24}
                   height={24}
                   alt="DownloadLogo"

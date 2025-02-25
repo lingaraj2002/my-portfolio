@@ -3,14 +3,14 @@
 @tailwind utilities;
 
 :root {
-  --background: #f8f8ff;
-  --foreground: #171717;
+  --background: #171717;
+  --foreground: #f8f8ff;
 }
 
 @media (prefers-color-scheme: dark) {
   :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
+    --background: #ededed;
+    --foreground: #0a0a0a;
     --font-pixelify: "Pixelify", sans-serif;
     --font-vt323: "vt323", sans-serif;
   }
@@ -20,15 +20,8 @@ body {
   color: var(--foreground);
   /* background: var(--background); */
   font-family: var(--font-vt323);
-  background-image: linear-gradient(
-    to top,
-    lightgrey 0%,
-    lightgrey 1%,
-    #e0e0e0 26%,
-    #efefef 48%,
-    #d9d9d9 75%,
-    #bcbcbc 100%
-  );
+  background: url("../assets/image/my-portfolio-landing-bg.jpeg") no-repeat
+    fixed center;
 }
 h1,
 h2,
