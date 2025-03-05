@@ -11,6 +11,7 @@ import DownloadResumeBlack from "../assets/icon/download-resume-black.svg";
 import BurgerWhite from "../assets/icon/burger-white.svg";
 import BurgerBlack from "../assets/icon/burger-black.svg";
 import Image from "next/image";
+import HomeNavbarShipPart from "../assets/image/home-navbar-part.png";
 
 interface HeaderProps {
   isMobile: boolean;
@@ -39,6 +40,11 @@ export default function Header(props: HeaderProps) {
     >
       <nav className="max-w-7xl px-4 py-4 sm:py-2 mx-auto flex justify-between items-center relative">
         <Image
+          className={styles.HomeNavbarShipPart}
+          src={HomeNavbarShipPart}
+          alt="Top1"
+        />
+        <Image
           // src={isScrolled ? MainLogoWhite.src : MainLogoBlack.src}
           src={MainLogoWhite.src}
           width={128}
@@ -63,15 +69,15 @@ export default function Header(props: HeaderProps) {
         >
           <li
             className={`${styles.navItem} ${
-              pathname === "/" ? styles.navActive : ""
+              page === "home" ? styles.navItem__active : ""
             }`}
             onClick={() => setPage("home")}
           >
             <Link href="/">Home</Link>
           </li>
           <li
-            className={` ${
-              pathname === "/about" ? styles.navItem__active : styles.navItem
+            className={`${styles.navItem} ${
+              page === "about" ? styles.navItem__active : ""
             }`}
             onClick={() => setPage("about")}
           >
@@ -79,7 +85,7 @@ export default function Header(props: HeaderProps) {
           </li>
           <li
             className={`${styles.navItem} ${
-              page === "skills" ? styles.navActive : ""
+              page === "skills" ? styles.navItem__active : ""
             }`}
             onClick={() => setPage("skills")}
           >
@@ -87,7 +93,7 @@ export default function Header(props: HeaderProps) {
           </li>
           <li
             className={`${styles.navItem} ${
-              page === "projects" ? styles.navActive : ""
+              page === "projects" ? styles.navItem__active : ""
             }`}
             onClick={() => setPage("projects")}
           >
@@ -95,7 +101,7 @@ export default function Header(props: HeaderProps) {
           </li>
           <li
             className={`${styles.navItem} ${
-              page === "contact" ? styles.navActive : ""
+              page === "contact" ? styles.navItem__active : ""
             }`}
             onClick={() => setPage("contact")}
           >
@@ -103,7 +109,7 @@ export default function Header(props: HeaderProps) {
           </li>
           <li
             className={`${styles.navItem} ${
-              page === "settings" ? styles.navActive : ""
+              page === "settings" ? styles.navItem__active : ""
             }`}
             onClick={() => setPage("settings")}
           >
