@@ -30,27 +30,34 @@ const Layout: React.FC<{ children: React.ReactNode }> = ({ children }) => {
   useEffect(() => {
     if (typeof window === "undefined") return; // Ensure code runs only on client
 
-    // Function for check screen is mobile
-    const updateMobileView = () => {
-      setIsMobile(window.innerWidth <= 639);
+    // Function for check mobile
+    const handleCheckMobile = () => {
+      const isMobileWidth = window.innerWidth <= 1639;
+      setIsMobile(isMobileWidth);
+      console.log(
+        "Detected width:",
+        window.innerWidth,
+        "→ isMobile:",
+        isMobileWidth
+      );
     };
 
     // Function for check page is scrolled
-    const handleScrollPage = () => {
-      setIsScrolled(window.scrollY > 50);
-    };
+    const handleScrollPage = () => setIsScrolled(window.scrollY > 50);
 
     // Set initial values
-    updateMobileView();
+    setTimeout(() => {
+      handleCheckMobile();
+    }, 0);
     handleScrollPage();
 
     // Add event listeners
-    window.addEventListener("resize", updateMobileView);
+    window.addEventListener("resize", handleCheckMobile);
     window.addEventListener("scroll", handleScrollPage);
 
     // Cleanup function
     return () => {
-      window.removeEventListener("resize", updateMobileView);
+      window.removeEventListener("resize", handleCheckMobile);
       window.removeEventListener("scroll", handleScrollPage);
     };
   }, []);

@@ -5,20 +5,22 @@
 :root {
   --background: #171717;
   --foreground: #f8f8ff;
+  --font-pixelify: "Pixelify", sans-serif;
+  --font-vt323: "vt323", sans-serif;
+  /* --color-light: #f8f8ff;
+  --color-dark: #171717; */
 }
 
-@media (prefers-color-scheme: dark) {
+/* @media (prefers-color-scheme: dark) {
   :root {
     --background: #ededed;
     --foreground: #0a0a0a;
-    --font-pixelify: "Pixelify", sans-serif;
-    --font-vt323: "vt323", sans-serif;
   }
-}
+} */
 
 body {
   color: var(--foreground);
-  /* background: var(--background); */
+  background: var(--background);
   font-family: var(--font-vt323);
   background: url("../assets/image/my-portfolio-landing-bg.jpeg") no-repeat
     fixed center;
