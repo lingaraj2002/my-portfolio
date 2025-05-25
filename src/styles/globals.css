@@ -17,14 +17,29 @@
     --foreground: #0a0a0a;
   }
 } */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  /* outline: 1px solid red; */
+}
+html,
+body {
+  height: 100%;
+  overflow-x: hidden;
+}
 
 body {
   color: var(--foreground);
-  background: var(--background);
+  background-color: var(--background); /* fallback color */
   font-family: var(--font-vt323);
-  background: url("../assets/image/my-portfolio-landing-bg.jpeg") no-repeat
-    fixed center;
+  background-image: url("../assets/image/my-portfolio-landing-bg.jpeg");
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-position: center;
+  background-size: cover;
 }
+
 h1,
 h2,
 h3,
