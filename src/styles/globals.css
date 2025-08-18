@@ -1,3 +1,33 @@
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
+/* Tailwind base layers */
+@import "tailwindcss";
+
+/* Custom utilities */
+@layer utilities {
+  .bg-scroll-space {
+    background-image: url("../assets/image/my-portfolio-landing-bg.jpeg");
+    background-repeat: repeat;
+    background-size: auto;
+    background-position: 0 0;
+    animation: scrollingSpace 60s linear infinite;
+  }
+
+  @keyframes scrollingSpace {
+    0% {
+      background-position: 0 0;
+    }
+    100% {
+      background-position: 0 1000px;
+    }
+  }
+
+  .animate-scroll-space {
+    animation: scrollingSpace 60s linear infinite;
+  }
+}
+
+/* Optional: safer link style override */
+a {
+  color: black; /* Custom color */
+  cursor: pointer; /* Keep pointer */
+  text-decoration: none; /* Remove underline (instead of all: unset) */
+}
