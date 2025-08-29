@@ -11,6 +11,8 @@
     animation: scrollingSpace 60s linear infinite;
   }
 
+  /* Variables */
+
   @keyframes scrollingSpace {
     0% {
       background-position: 0 0;
