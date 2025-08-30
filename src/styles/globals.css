@@ -11,8 +11,6 @@
     animation: scrollingSpace 60s linear infinite;
   }
 
-  /* Variables */
-
   @keyframes scrollingSpace {
     0% {
       background-position: 0 0;
@@ -32,4 +30,19 @@ a {
   color: black; /* Custom color */
   cursor: pointer; /* Keep pointer */
   text-decoration: none; /* Remove underline (instead of all: unset) */
+}
+
+/* Use the CSS variables injected by next/font */
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: var(--font-pixelify-sans), sans-serif;
+}
+
+p,
+a {
+  font-family: var(--font-vt323), monospace;
 }
