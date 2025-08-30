@@ -147,12 +147,12 @@ import { useEffect, useState } from "react";
 
 const Header = () => {
   const [isOpen, setIsOpen] = useState(false);
-  const sections = ["home", "about", "skills", "projects", "settings"];
+  const sections = ["home", "about", "skills", "projects", "contact"];
   const [isScrolled, setIsScrolled] = useState(false);
 
   const colors = {
-    white: "#f8f9fa",
-    black: "#212529",
+    light: "#f8f9fa",
+    dark: "#212529",
   };
 
   useEffect(() => {
@@ -171,46 +171,48 @@ const Header = () => {
   }, []);
 
   return (
-    <nav
-      id="navbar"
-      className={`fixed top-0 w-full ${
-        isScrolled ? "bg-white" : "bg-transparent"
-      }  z-50 flex justify-between items-center px-6 py-4`}
+    <div
+      className={`fixed top-0 left-0 w-full transition duration-800 ease-in-out z-50 ${
+        isScrolled ? "" : "bg-transparent"
+      }`}
+      style={isScrolled ? { backgroundColor: colors.light } : undefined}
     >
-      <Image
-        src={isScrolled ? MainLogoBlack.src : MainLogoWhite.src}
-        width={128}
-        height={32}
-        alt="Logo"
-        className="transition duration-1000 ease-in-out z-1"
-      />
+      <nav className="w-full max-w-[1280px] mx-auto flex justify-between items-center px-6 py-4">
+        <Image
+          src={isScrolled ? MainLogoBlack.src : MainLogoWhite.src}
+          width={128}
+          height={32}
+          alt="Logo"
+          className="transition duration-1000 ease-in-out z-1"
+        />
 
-      {/* Hamburger for mobile */}
-      <button
-        className="block md:hidden text-white text-2xl"
-        onClick={() => setIsOpen(!isOpen)}
-      >
-        ☰
-      </button>
+        {/* Hamburger for mobile */}
+        <button
+          className="block md:hidden text-white text-2xl"
+          onClick={() => setIsOpen(!isOpen)}
+        >
+          ☰
+        </button>
 
-      {/* Nav links */}
-      <ul
-        className={`hidden md:flex md:space-x-6 absolute md:static left-0 w-full md:w-auto transition-all duration-300 `}
-      >
-        {sections.map((sec) => (
-          <li key={sec}>
-            <a
-              href={`#${sec}`}
-              className="block px-6 py-1"
-              onClick={() => setIsOpen(false)}
-              style={{ color: isScrolled ? "black" : "white" }}
-            >
-              {sec.charAt(0).toUpperCase() + sec.slice(1)}
-            </a>
-          </li>
-        ))}
-      </ul>
-    </nav>
+        {/* Nav links */}
+        <ul
+          className={`hidden md:flex md:space-x-6 absolute md:static left-0 w-full md:w-auto transition-all duration-300 `}
+        >
+          {sections.map((sec) => (
+            <li key={sec}>
+              <a
+                href={`#${sec}`}
+                className="block px-2 py-1"
+                onClick={() => setIsOpen(false)}
+                style={{ color: isScrolled ? "black" : "white" }}
+              >
+                {sec.charAt(0).toUpperCase() + sec.slice(1)}
+              </a>
+            </li>
+          ))}
+        </ul>
+      </nav>
+    </div>
   );
 };
 export default Header;
