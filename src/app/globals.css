@@ -1,0 +1,40 @@
+@import "tailwindcss";
+
+@layer base {
+  :root {
+    --font-inter: "Inter", sans-serif;
+    --font-space-grotesk: "Space Grotesk", sans-serif;
+  }
+
+  html {
+    scroll-behavior: smooth;
+    background-color: #000000;
+    color: #ffffff;
+    overflow-x: hidden;
+  }
+
+  body {
+    font-family: var(--font-inter);
+    -webkit-font-smoothing: antialiased;
+  }
+
+  /* Custom minimal scrollbar */
+  ::-webkit-scrollbar {
+    width: 6px;
+  }
+  ::-webkit-scrollbar-track {
+    background: #000000;
+  }
+  ::-webkit-scrollbar-thumb {
+    background: #262626;
+    border-radius: 3px;
+  }
+  ::-webkit-scrollbar-thumb:hover {
+    background: #404040;
+  }
+}
+
+.text-stroke {
+  -webkit-text-stroke: 1px rgba(255, 255, 255, 0.15);
+  color: transparent;
+}

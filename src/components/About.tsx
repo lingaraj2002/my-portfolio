@@ -1,25 +1,97 @@
-// export default function About() {
-//   return (
-//     <section className="min-h-screen p-8">
-//       <h1 className="text-4xl font-bold">About Me</h1>
-//       <p className="text-lg mt-4">
-//         I am a developer passionate about building web applications.
-//       </p>
-//     </section>
-//   );
-// }
+"use client";
+import {
+  useInView,
+  // motion
+} from "framer-motion";
+import { useRef, useEffect, useState } from "react";
 
-const About = () => {
+function Counter({ value }: { value: number }) {
+  const [count, setCount] = useState(0);
+  const ref = useRef(null);
+  const isInView = useInView(ref, { once: true });
+
+  useEffect(() => {
+    if (isInView) {
+      let start = 0;
+      const end = value;
+      if (start === end) return;
+      const totalMiliseconds = 1500;
+      const incrementTime = Math.floor(totalMiliseconds / end);
+
+      const timer = setInterval(() => {
+        start += 1;
+        setCount(start);
+        if (start === end) clearInterval(timer);
+      }, incrementTime);
+
+      return () => clearInterval(timer);
+    }
+  }, [isInView, value]);
+
+  return <span ref={ref}>{count}</span>;
+}
+
+export default function About() {
   return (
-    <div className="min-h-screen px-6 py-20 bg-white text-black">
-      <div className="max-w-4xl mx-auto">
-        <h2 className="text-4xl font-bold mb-6">About Me</h2>
-        <p>
-          I’m a passionate developer who loves building user-friendly websites
-          and games.
-        </p>
+    <section
+      id="about"
+      className="py-32 bg-neutral-950/30 border-y border-neutral-900 relative"
+    >
+      <div className="max-w-7xl mx-auto px-6">
+        <div className="grid grid-cols-1 lg:grid-cols-12 gap-12">
+          <div className="lg:col-span-4">
+            <span className="font-mono text-xs text-neutral-500 tracking-widest uppercase block mb-2">
+              01. IDENTITY
+            </span>
+            <h2 className="font-display text-4xl font-bold uppercase tracking-tight">
+              Professional Narrative
+            </h2>
+          </div>
+
+          <div className="lg:col-span-8 space-y-6 text-neutral-400 text-base leading-relaxed">
+            <p>
+              I am Lingaraj, a software engine designer specializing in deep
+              production frontend applications, optimized game logic
+              architectures, and immersive interactive graphics matrices.
+              Working natively in the intersection of structural performance and
+              visual dominance.
+            </p>
+            <p>
+              With extensive practice across full-stack paradigms, browser games
+              rendering pipelines, and rigorous interface systems, I assemble
+              application architecture built to load instantly and handle
+              gracefully.
+            </p>
+
+            <div className="grid grid-cols-2 md:grid-cols-3 gap-8 pt-10 border-t border-neutral-900">
+              <div>
+                <h3 className="font-display text-4xl md:text-5xl font-extrabold text-white">
+                  <Counter value={2} />+
+                </h3>
+                <p className="font-mono text-xs uppercase tracking-wider text-neutral-500 mt-2">
+                  Years Active Experience
+                </p>
+              </div>
+              <div>
+                <h3 className="font-display text-4xl md:text-5xl font-extrabold text-white">
+                  <Counter value={20} />+
+                </h3>
+                <p className="font-mono text-xs uppercase tracking-wider text-neutral-500 mt-2">
+                  Production Implementations
+                </p>
+              </div>
+              <div>
+                <h3 className="font-display text-4xl md:text-5xl font-extrabold text-white">
+                  100%
+                </h3>
+                <p className="font-mono text-xs uppercase tracking-wider text-neutral-500 mt-2">
+                  Monochrome Dedication
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
       </div>
-    </div>
+    </section>
   );
-};
-export default About;
+}
