@@ -30,9 +30,14 @@ export default function Testimonials() {
   return (
     <section className="py-32 border-t border-neutral-900 bg-black overflow-hidden relative">
       <div className="max-w-4xl mx-auto px-6 text-center">
-        <span className="font-mono text-xs text-neutral-500 tracking-widest uppercase block mb-6">
-          SYSTEM VERIFICATIONS
-        </span>
+        <div className="mb-16 text-center">
+          <span className="font-mono text-xs text-neutral-500 tracking-widest uppercase block mb-2">
+            06. TESTIMONIALS
+          </span>
+          <h2 className="font-display text-4xl font-bold uppercase tracking-tight">
+            What People Say
+          </h2>
+        </div>
 
         <div className="min-h-[160px] flex items-center justify-center">
           <AnimatePresence mode="wait">

@@ -14,7 +14,8 @@ export default function Footer() {
             LINGARAJ
           </span>
           <p className="font-mono text-[10px] text-neutral-600 uppercase mt-1">
-            © 2026 Architectural Data Registry. All rights reserved.
+            © 2026 Lingaraj. Built with passion and creativity. All rights
+            reserved.
           </p>
         </div>
 
@@ -22,8 +23,14 @@ export default function Footer() {
           <a href="#home" className="hover:text-white transition-colors">
             Home
           </a>
+          <a href="#about" className="hover:text-white transition-colors">
+            About
+          </a>
           <a href="#projects" className="hover:text-white transition-colors">
             Projects
+          </a>
+          <a href="#experience" className="hover:text-white transition-colors">
+            Experience
           </a>
           <a href="#contact" className="hover:text-white transition-colors">
             Contact
@@ -33,7 +40,7 @@ export default function Footer() {
         <button
           onClick={scrollToTop}
           className="w-10 h-10 border border-neutral-900 hover:border-neutral-500 flex items-center justify-center text-neutral-500 hover:text-white transition-colors"
-          title="Return to top"
+          title="Back to top"
         >
           <ArrowUp size={14} />
         </button>

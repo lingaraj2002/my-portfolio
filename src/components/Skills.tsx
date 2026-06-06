@@ -3,22 +3,52 @@ import { useState } from "react";
 import { motion } from "framer-motion";
 
 const skillsData = [
-  { name: "TypeScript", category: "Frontend", level: 95 },
-  { name: "Next.js 15", category: "Frontend", level: 90 },
-  { name: "React.js", category: "Frontend", level: 95 },
-  { name: "Tailwind CSS", category: "Frontend", level: 98 },
-  { name: "HTML5/CSS3", category: "Frontend", level: 95 },
-  { name: "Node.js", category: "Backend", level: 85 },
+  // Frontend
+  { name: "HTML5", category: "Frontend", level: 96 },
+  { name: "XML", category: "Frontend", level: 85 },
+  { name: "JSON", category: "Frontend", level: 95 },
+  { name: "CSS3", category: "Frontend", level: 95 },
+  { name: "JavaScript", category: "Frontend", level: 90 },
+  { name: "TypeScript", category: "Frontend", level: 85 },
+  { name: "React.js", category: "Frontend", level: 90 },
+  { name: "Next.js", category: "Frontend", level: 80 },
+  { name: "Redux", category: "Frontend", level: 85 },
+  { name: "Tailwind CSS", category: "Frontend", level: 80 },
+  { name: "Bootstrap", category: "Frontend", level: 90 },
+  { name: "Sass", category: "Frontend", level: 88 },
+
+  // Backend
+  { name: "Node.js", category: "Backend", level: 80 },
   { name: "Express.js", category: "Backend", level: 88 },
   { name: "REST APIs", category: "Backend", level: 92 },
-  { name: "MongoDB", category: "Database", level: 80 },
+  { name: "Python", category: "Backend", level: 80 },
+  { name: "FastAPI", category: "Backend", level: 75 },
+  { name: "Firebase", category: "Backend", level: 80 },
+
+  // Database
   { name: "MySQL", category: "Database", level: 85 },
-  { name: "Git / GitHub", category: "Tools", level: 90 },
-  { name: "Figma", category: "Tools", level: 85 },
-  { name: "Blender", category: "Tools", level: 70 },
-  { name: "Phaser.js", category: "Game Dev", level: 90 },
-  { name: "Cocos Creator", category: "Game Dev", level: 75 },
+  { name: "MongoDB", category: "Database", level: 80 },
+
+  // Game Development
   { name: "JavaScript Games", category: "Game Dev", level: 95 },
+  { name: "Phaser.js", category: "Game Dev", level: 85 },
+  { name: "HTML Canvas", category: "Game Dev", level: 85 },
+  { name: "Three.js", category: "Game Dev", level: 80 },
+  { name: "Cocos Creator", category: "Game Dev", level: 75 },
+  { name: "Unity", category: "Game Dev", level: 70 },
+  { name: "Unity Ads", category: "Game Dev", level: 75 },
+
+  // Tools
+  { name: "Git & GitHub", category: "Tools", level: 90 },
+  { name: "VS Code", category: "Tools", level: 95 },
+  { name: "Postman", category: "Tools", level: 90 },
+  { name: "Figma", category: "Tools", level: 85 },
+  { name: "Cloudinary", category: "Tools", level: 85 },
+  { name: "Vercel", category: "Tools", level: 90 },
+  { name: "Render", category: "Tools", level: 80 },
+  { name: "Railway", category: "Tools", level: 75 },
+  { name: "Aseprite", category: "Tools", level: 80 },
+  { name: "Blender", category: "Tools", level: 70 },
 ];
 
 const categories = [
@@ -43,10 +73,10 @@ export default function Skills() {
         <div className="flex flex-col md:flex-row md:items-end justify-between mb-12 gap-6">
           <div>
             <span className="font-mono text-xs text-neutral-500 tracking-widest uppercase block mb-2">
-              02. TECHNOLOGY MATRIX
+              02. SKILLS & TOOLS
             </span>
             <h2 className="font-display text-4xl font-bold uppercase tracking-tight">
-              Technical Stack
+              Technologies I Work With
             </h2>
           </div>
 

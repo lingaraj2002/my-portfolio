@@ -41,26 +41,26 @@ export default function About() {
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-12">
           <div className="lg:col-span-4">
             <span className="font-mono text-xs text-neutral-500 tracking-widest uppercase block mb-2">
-              01. IDENTITY
+              01. ABOUT ME
             </span>
             <h2 className="font-display text-4xl font-bold uppercase tracking-tight">
-              Professional Narrative
+              Building Digital Experiences Through Code & Creativity
             </h2>
           </div>
 
           <div className="lg:col-span-8 space-y-6 text-neutral-400 text-base leading-relaxed">
             <p>
-              I am Lingaraj, a software engine designer specializing in deep
-              production frontend applications, optimized game logic
-              architectures, and immersive interactive graphics matrices.
-              Working natively in the intersection of structural performance and
-              visual dominance.
+              I’m Lingaraj, a Full Stack Developer and Game Developer passionate
+              about building modern web applications, interactive games, and
+              engaging digital experiences. I enjoy transforming ideas into
+              scalable products through clean code, thoughtful design, and
+              performance-focused development.
             </p>
             <p>
-              With extensive practice across full-stack paradigms, browser games
-              rendering pipelines, and rigorous interface systems, I assemble
-              application architecture built to load instantly and handle
-              gracefully.
+              My expertise includes React, Next.js, TypeScript, Node.js, game
+              development with Phaser, and UI/UX design. I continuously explore
+              new technologies and creative workflows to build products that are
+              both functional and visually appealing.
             </p>
 
             <div className="grid grid-cols-2 md:grid-cols-3 gap-8 pt-10 border-t border-neutral-900">
@@ -69,23 +69,23 @@ export default function About() {
                   <Counter value={2} />+
                 </h3>
                 <p className="font-mono text-xs uppercase tracking-wider text-neutral-500 mt-2">
-                  Years Active Experience
+                  Years Experience
                 </p>
               </div>
               <div>
                 <h3 className="font-display text-4xl md:text-5xl font-extrabold text-white">
-                  <Counter value={20} />+
+                  <Counter value={5} />+
                 </h3>
                 <p className="font-mono text-xs uppercase tracking-wider text-neutral-500 mt-2">
-                  Production Implementations
+                  Projects Completed
                 </p>
               </div>
               <div>
                 <h3 className="font-display text-4xl md:text-5xl font-extrabold text-white">
-                  100%
+                  <Counter value={10} />+
                 </h3>
                 <p className="font-mono text-xs uppercase tracking-wider text-neutral-500 mt-2">
-                  Monochrome Dedication
+                  Technologies Used
                 </p>
               </div>
             </div>

@@ -54,7 +54,7 @@ export default function Navbar() {
           href="#home"
           className="font-display font-bold text-xl tracking-tighter text-white"
         >
-          <span className="text-neutral-500">LINGARAJ</span>
+          <span className="text-2xl text-neutral-500">LINGARAJ</span>
         </a>
 
         {/* Desktop Navigation */}

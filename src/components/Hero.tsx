@@ -1,19 +1,21 @@
 "use client";
 import { useState, useEffect } from "react";
 import { motion, AnimatePresence } from "framer-motion";
-// import {
-//   ArrowUpRight,
-//   Github,
-//   Linkedin,
-//   Twitter,
-//   Terminal,
-// } from "lucide-react";
+import { ArrowUpRight } from "lucide-react";
+import {
+  FaGithubSquare as GithubIcon,
+  FaLinkedin as LinkedinIcon,
+} from "react-icons/fa";
+import { FaSquareXTwitter as XIcon } from "react-icons/fa6";
+import { IoTerminalOutline as TerminalIcon } from "react-icons/io5";
 
 const roles = [
-  "Frontend Developer",
   "Full Stack Developer",
   "Game Developer",
+  "Frontend Developer",
+  "Backend Developer",
   "UI/UX Designer",
+  "Game Designer",
   "Pixel Artist",
 ];
 
@@ -42,7 +44,7 @@ export default function Hero() {
           >
             <span className="w-2 h-2 rounded-full bg-white animate-pulse" />
             <span className="text-[10px] uppercase tracking-widest font-mono text-neutral-400">
-              Available for Enterprise Contracts
+              Available for Freelance & Full-Time Opportunities
             </span>
           </motion.div>
 
@@ -53,7 +55,9 @@ export default function Hero() {
             className="font-display text-5xl md:text-7xl lg:text-8xl font-black tracking-tighter uppercase leading-none"
           >
             LINGARAJ <br />
-            <span className="text-neutral-500">DIGITAL ARCHITECT</span>
+            <span className="text-neutral-500">
+              BUILDING DIGITAL EXPERIENCES
+            </span>
           </motion.h1>
 
           <div className="h-16 flex items-center mt-4 mb-8">
@@ -66,7 +70,7 @@ export default function Hero() {
                 transition={{ duration: 0.4 }}
                 className="font-mono text-lg md:text-2xl text-neutral-400 flex items-center gap-3"
               >
-                {/* <Terminal size={20} className="text-white" /> */}
+                <TerminalIcon size={20} className="text-white" />
                 {roles[roleIdx]}
               </motion.p>
             </AnimatePresence>
@@ -78,9 +82,9 @@ export default function Hero() {
             transition={{ delay: 0.4 }}
             className="text-neutral-400 max-w-xl text-sm md:text-base mb-10 leading-relaxed font-sans"
           >
-            Building high-end interactive systems, performance-optimized
-            responsive applications, and pixel-perfect modular visual
-            interfaces. Engineered with architectural precision.
+            I build modern web applications, interactive games, and intuitive
+            user experiences. Passionate about creating fast, scalable, and
+            visually engaging digital products using modern technologies.
           </motion.p>
 
           <motion.div
@@ -94,10 +98,10 @@ export default function Hero() {
               className="group h-12 px-6 bg-white text-black text-xs font-semibold uppercase tracking-widest rounded-none flex items-center gap-2 hover:bg-neutral-200 transition-colors"
             >
               View Projects
-              {/* <ArrowUpRight
+              <ArrowUpRight
                 size={14}
                 className="group-hover:translate-x-0.5 group-hover:-translate-y-0.5 transition-transform"
-              /> */}
+              />
             </a>
             <a
               href="#contact"
@@ -112,34 +116,40 @@ export default function Hero() {
         <div className="hidden lg:col-span-4 lg:flex flex-col gap-6 justify-end items-end h-full font-mono text-right">
           <div>
             <span className="block text-xs uppercase text-neutral-500 tracking-wider">
-              Based In
+              Availability
             </span>
-            <span className="text-sm text-white">Global Remote</span>
+            <span className="text-sm text-white">Remote Worldwide</span>
           </div>
           <div>
             <span className="block text-xs uppercase text-neutral-500 tracking-wider">
-              Design Standard
+              Experience
             </span>
-            <span className="text-sm text-white">Strict Monochrome</span>
+            <span className="text-sm text-white">2+ Years</span>
+          </div>
+          <div>
+            <span className="block text-xs uppercase text-neutral-500 tracking-wider">
+              Specialization
+            </span>
+            <span className="text-sm text-white">Web & Game Development</span>
           </div>
           <div className="flex gap-4 mt-4">
             <a
               href="#"
               className="p-2 border border-neutral-900 hover:border-neutral-500 text-neutral-400 hover:text-white transition-colors"
             >
-              {/* <Github size={18} /> */}
+              <GithubIcon size={18} />
             </a>
             <a
               href="#"
               className="p-2 border border-neutral-900 hover:border-neutral-500 text-neutral-400 hover:text-white transition-colors"
             >
-              {/* <Linkedin size={18} /> */}
+              <LinkedinIcon size={18} />
             </a>
             <a
               href="#"
               className="p-2 border border-neutral-900 hover:border-neutral-500 text-neutral-400 hover:text-white transition-colors"
             >
-              {/* <Twitter size={18} /> */}
+              <XIcon size={18} />
             </a>
           </div>
         </div>

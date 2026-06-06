@@ -12,56 +12,44 @@ const services = [
   {
     icon: Layout,
     title: "Web Development",
-    desc: "Production grade web applications engineered from strategic layout components.",
-    specs: ["Next.js SSR", "Performance Core", "Edge Rendering"],
+    desc: "Custom websites and web applications built with modern technologies for performance, scalability, and user experience.",
+    specs: ["Next.js Development", "Responsive Design", "SEO Optimization"],
   },
   {
     icon: Smartphone,
     title: "Frontend Development",
-    desc: "Highly interactive fluid visual states with granular responsive compliance.",
-    specs: [
-      "Tailwind Infrastructure",
-      "Framer Micro-interactions",
-      "Accessible Tree",
-    ],
+    desc: "Modern user interfaces built with React, TypeScript, and responsive design principles.",
+    specs: ["React & Next.js", "Tailwind CSS", "Interactive Animations"],
   },
   {
     icon: Layers,
     title: "Full Stack Development",
-    desc: "End-to-end deployment arrays coupling reactive UI states to scalable storage layers.",
-    specs: ["Node Rest Frameworks", "Secured DB Integration", "State Sync"],
+    desc: "Complete web solutions from frontend interfaces to backend systems and databases.",
+    specs: ["Node.js APIs", "Database Integration", "Authentication Systems"],
   },
   {
     icon: Cpu,
-    title: "UI/UX Architecture",
-    desc: "Minimalist visual identity mockups translating data logic into premium aesthetics.",
-    specs: [
-      "High-End Wireframes",
-      "Typography Optimization",
-      "Figma Ecosystem",
-    ],
+    title: "UI/UX Design",
+    desc: "User-focused interfaces designed to improve usability, engagement, and visual consistency.",
+    specs: ["Wireframing", "Prototyping", "Figma Design"],
   },
   {
     icon: Terminal,
     title: "Landing Page Development",
-    desc: "Conversion optimized structural layouts with ultra-precise responsive tuning.",
-    specs: ["SEO Data Structures", "Light Weight Payload", "High CTR UX"],
+    desc: "High-converting landing pages optimized for marketing campaigns, products, and services.",
+    specs: ["SEO Ready", "Fast Loading", "Conversion Focused"],
   },
   {
     icon: ShieldCheck,
-    title: "Portfolio Systems",
-    desc: "Executive level monochrome branding sites designed for ultimate personal exposure.",
-    specs: ["Stagger Transitions", "Clean Code Execution", "Fluid Scrollers"],
+    title: "Portfolio Websites",
+    desc: "Professional portfolio websites for developers, designers, freelancers, and businesses.",
+    specs: ["Modern Design", "Responsive Layout", "Custom Branding"],
   },
   {
     icon: Trophy,
     title: "Browser Game Development",
-    desc: "State machine architecture executing smooth standard loop games within web clients.",
-    specs: [
-      "Phaser Canvas Layers",
-      "Optimized Asset Pipelines",
-      "Mobile Touch Controls",
-    ],
+    desc: "Interactive browser-based games developed with modern web technologies and optimized performance.",
+    specs: ["Phaser.js", "HTML5 Games", "Mobile Support"],
   },
 ];
 
@@ -74,10 +62,10 @@ export default function Services() {
       <div className="max-w-7xl mx-auto px-6">
         <div className="mb-16">
           <span className="font-mono text-xs text-neutral-500 tracking-widest uppercase block mb-2">
-            // 03. CAPABILITIES
+            03. SERVICES
           </span>
           <h2 className="font-display text-4xl font-bold uppercase tracking-tight">
-            Premium Architecture Services
+            What I Can Help You Build
           </h2>
         </div>
 

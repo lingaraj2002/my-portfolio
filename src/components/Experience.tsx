@@ -1,21 +1,39 @@
-const timelineData = [
-  {
-    pos: "Senior Frontend Engineer",
-    dur: "2025 - Present",
-    tech: ["Next.js 15", "TypeScript", "Tailwind Layering"],
-    desc: "Architecting visual UI performance vectors and streaming asset dynamic layout integrations.",
-  },
+const experienceData = [
   {
     pos: "Full Stack Developer",
-    dur: "2024 - 2025",
-    tech: ["Node.js", "Express.js", "NoSQL Clusters"],
-    desc: "Engineered secure modular data transfer endpoints linking custom frontend rendering models.",
+    dur: "2023 - Present",
+    tech: ["Next.js", "TypeScript", "React", "Node.js", "Tailwind CSS"],
+    desc: "Developing modern web applications with a focus on performance, scalability, and user experience. Building responsive interfaces, REST APIs, and full-stack solutions using modern technologies.",
   },
   {
-    pos: "Independent Game Architect",
-    dur: "2023 - 2024",
-    tech: ["Phaser Canvas", "State Management Engine"],
-    desc: "Assembled physics matrices and layout rendering components for remote digital game clients.",
+    pos: "Game Development Journey",
+    dur: "2023 - Present",
+    tech: ["Phaser.js", "JavaScript", "HTML5 Canvas", "Cocos Creator"],
+    desc: "Exploring browser game development, game mechanics, pixel art workflows, and interactive experiences through personal projects and continuous learning.",
+  },
+  {
+    pos: "Master's Degree (Distance Education)",
+    dur: "2024 - 2026",
+    tech: ["Advanced Computing", "Software Engineering"],
+    desc: "Completed postgraduate studies through distance education while continuing professional development in web and game development.",
+  },
+  {
+    pos: "Backend Development Trainee",
+    dur: "Nov 2023 - Dec 2023",
+    tech: ["Node.js", "Express.js", "MongoDB", "MySQL", "REST APIs"],
+    desc: "Completed hands-on training in backend development, focusing on API development, database management, authentication, and scalable server-side applications.",
+  },
+  {
+    pos: "Frontend Development Trainee",
+    dur: "2022 - 2023",
+    tech: ["HTML5", "CSS3", "JavaScript", "Bootstrap", "React"],
+    desc: "Learned modern frontend development by building responsive websites and interactive user interfaces using industry-standard technologies and best practices.",
+  },
+  {
+    pos: "Bachelor's Degree",
+    dur: "2019 - 2022",
+    tech: ["Computer Science", "Programming Fundamentals"],
+    desc: "Completed undergraduate studies while building a strong foundation in programming, software development, and problem-solving.",
   },
 ];
 
@@ -28,15 +46,15 @@ export default function Experience() {
       <div className="max-w-4xl mx-auto px-6">
         <div className="mb-16 text-center">
           <span className="font-mono text-xs text-neutral-500 tracking-widest uppercase block mb-2">
-            // 05. TRACK RECORD
+            05. EXPERIENCE
           </span>
           <h2 className="font-display text-4xl font-bold uppercase tracking-tight">
-            Career Engine Timeline
+            Professional Journey
           </h2>
         </div>
 
         <div className="relative border-l border-neutral-900 pl-8 space-y-12">
-          {timelineData.map((item, index) => (
+          {experienceData.map((item, index) => (
             <div key={index} className="relative group">
               {/* Dot indicator */}
               <div className="absolute -left-[37px] top-1.5 w-4 h-4 bg-black border-2 border-neutral-800 group-hover:border-white transition-colors rounded-full" />

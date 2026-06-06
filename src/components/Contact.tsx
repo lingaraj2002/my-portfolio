@@ -35,28 +35,28 @@ export default function Contact() {
       <div className="max-w-7xl mx-auto px-6 grid grid-cols-1 lg:grid-cols-12 gap-12">
         <div className="lg:col-span-5">
           <span className="font-mono text-xs text-neutral-500 tracking-widest uppercase block mb-2">
-            06. COMMUNICATIONS
+            07. CONTACT
           </span>
           <h2 className="font-display text-4xl font-bold uppercase tracking-tight mb-6">
-            Initiate Transmission
+            Let&apos;s Work Together
           </h2>
           <p className="text-xs text-neutral-400 leading-relaxed max-w-md mb-8">
-            Submit contract pipelines, engineering requirements, or system
-            deployment requests directly into the network architecture using the
-            secure configuration panel.
+            Have a project in mind, a freelance opportunity, or just want to
+            connect? Feel free to reach out. I&apos;m always open to discussing
+            new ideas, collaborations, and exciting projects.
           </p>
           <div className="space-y-4 font-mono text-xs text-neutral-400">
             <div>
               <span className="text-neutral-600 block uppercase tracking-wider">
-                [Secure Endpoint]
+                Email
               </span>
-              <span className="text-white">dev.lingaraj@proton.me</span>
+              <span className="text-white">lingaraj01052002@gmail.com</span>
             </div>
             <div>
               <span className="text-neutral-600 block uppercase tracking-wider">
-                [Availability Node]
+                Location
               </span>
-              <span className="text-white">Active Enterprise Hours</span>
+              <span className="text-white">Tamil Nadu, India</span>
             </div>
           </div>
         </div>
@@ -81,13 +81,13 @@ export default function Contact() {
             </div>
             <input
               type="text"
-              placeholder="Subject Matrix"
+              placeholder="Subject"
               value={form.subject}
               onChange={(e) => setForm({ ...form, subject: e.target.value })}
               className="h-12 bg-black border border-neutral-900 rounded-none px-4 text-xs font-mono text-white focus:outline-none focus:border-neutral-500 placeholder-neutral-700 w-full"
             />
             <textarea
-              placeholder="Message payload specifications..."
+              placeholder="Tell me about your project..."
               rows={5}
               value={form.message}
               onChange={(e) => setForm({ ...form, message: e.target.value })}
@@ -100,10 +100,10 @@ export default function Contact() {
               className="w-full h-12 bg-white hover:bg-neutral-200 transition-colors text-black font-mono text-xs uppercase tracking-widest font-bold flex items-center justify-center gap-2 disabled:bg-neutral-800 disabled:text-neutral-500"
             >
               {status === "sending" ? (
-                "Transmitting..."
+                "Sending..."
               ) : (
                 <>
-                  Transmit Message <Send size={12} />
+                  Send Message <Send size={12} />
                 </>
               )}
             </button>
@@ -111,13 +111,14 @@ export default function Contact() {
             {status === "success" && (
               <div className="p-4 bg-neutral-950 border border-neutral-800 flex items-center gap-3 text-xs font-mono text-white">
                 <CheckCircle size={16} className="text-white" /> Transmission
-                successfully routed through standard protocols.
+                Your message has been sent successfully. I&apos;ll get back to
+                you soon.
               </div>
             )}
             {status === "error" && (
               <div className="p-4 bg-neutral-950 border border-neutral-800 flex items-center gap-3 text-xs font-mono text-neutral-400">
                 <AlertCircle size={16} className="text-neutral-500" /> Input
-                parameters invalid. Fill all critical data arrays.
+                Please fill in all required fields.
               </div>
             )}
           </form>

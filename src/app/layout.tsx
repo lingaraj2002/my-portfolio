@@ -9,7 +9,7 @@ const spaceGrotesk = Space_Grotesk({
 });
 
 export const metadata: Metadata = {
-  title: "Lingaraj | Premium Developer Portfolio",
+  title: "Lingaraj | Full Stack & Game Developer",
   description:
     "Senior Full Stack & Game Developer creating high-end interactive digital experiences.",
   robots: "index, follow",

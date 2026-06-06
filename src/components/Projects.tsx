@@ -1,7 +1,8 @@
 "use client";
 import { useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
-// import { Github, ExternalLink, X, FolderKanban } from "lucide-react";
+import { ExternalLink, X, FolderKanban } from "lucide-react";
+import { FaGithubSquare as GithubIcon } from "react-icons/fa";
 
 interface Project {
   title: string;
@@ -71,10 +72,10 @@ export default function Projects() {
         <div className="flex flex-col md:flex-row md:items-end justify-between mb-16 gap-6">
           <div>
             <span className="font-mono text-xs text-neutral-500 tracking-widest uppercase block mb-2">
-              04. SELECTION OF WORKS
+              04. PROJECTS
             </span>
             <h2 className="font-display text-4xl font-bold uppercase tracking-tight">
-              Project Registry
+              Featured Work
             </h2>
           </div>
           <div className="flex flex-wrap gap-2">
@@ -108,10 +109,10 @@ export default function Projects() {
               >
                 <div>
                   <div className="w-full h-48 bg-neutral-900 border border-neutral-800 flex items-center justify-center mb-6 group-hover:border-neutral-600 transition-colors">
-                    {/* <FolderKanban
-                          size={32}
-                          className="text-neutral-600 group-hover:text-neutral-400 transition-colors"
-                        /> */}
+                    <FolderKanban
+                      size={32}
+                      className="text-neutral-600 group-hover:text-neutral-400 transition-colors"
+                    />
                   </div>
                   <span className="font-mono text-[10px] uppercase text-neutral-500 tracking-wider block mb-1">
                     {proj.category}
@@ -154,7 +155,7 @@ export default function Projects() {
                 onClick={() => setModalProj(null)}
                 className="absolute top-6 right-6 text-neutral-400 hover:text-white"
               >
-                {/* <X size={20} /> */}
+                <X size={20} />
               </button>
               <span className="font-mono text-[10px] uppercase tracking-wider text-neutral-500">
                 {modalProj.category}
@@ -182,13 +183,13 @@ export default function Projects() {
                   href={modalProj.git}
                   className="flex-1 h-11 border border-neutral-800 hover:border-neutral-500 font-mono text-xs uppercase tracking-wider flex items-center justify-center gap-2 text-white transition-colors"
                 >
-                  {/* <Github size={14} /> */} Source Code
+                  <GithubIcon size={14} /> View Source
                 </a>
                 <a
                   href={modalProj.live}
                   className="flex-1 h-11 bg-white hover:bg-neutral-200 font-mono text-xs uppercase tracking-wider flex items-center justify-center gap-2 text-black transition-colors"
                 >
-                  {/* <ExternalLink size={14} /> */} View Prototype
+                  <ExternalLink size={14} /> Live Demo
                 </a>
               </div>
             </motion.div>
